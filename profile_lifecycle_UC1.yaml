@@ -1,0 +1,4 @@
+- ERP.UC_1_1:
+  endpoint: "GET /Device"
+- ERP.UC_1_1:
+  endpoint: "GET /metadata"

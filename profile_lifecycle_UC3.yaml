@@ -1,0 +1,115 @@
+ERP.UC_3_1:
+  endpoint: "GET /Task"
+  profiles:
+    - GEM_ERP_PR_Task:
+        lifespan_days: 365 #MVO
+        versions:
+        - version: 1.1.1
+          valid_from: "2022-07-01"
+          valid_to: "2023-06-30"
+          lifespan_until: "2024-12-31"
+        - version: 1.2
+          valid_from: "2023-07-01"
+ERP.UC_3_2:
+  endpoint: "POST /Task/<id>/$abort"
+ERP.UC_3_3:
+  endpoint: "POST /Communication"
+  profiles:
+    - GEM_ERP_PR_Communication_*:
+      lifespan_days: 0
+      versions:
+      - version: 1.1.1
+        valid_from: "2022-07-01"
+        valid_to: "2023-12-31"
+
+        lifespan_until: "2023-12-31"
+      - version: 1.2
+        valid_from: "2023-07-01"
+ERP.UC_3_4:
+  endpoint: "GET /Communication"
+  profiles:
+    - GEM_ERP_PR_Communication_*:
+      lifespan_days: 375 # Einlösefrist-MVO plus Löschfrist
+      versions:
+      - version: 1.1.1
+        valid_from: "2022-07-01"
+        valid_to: "2023-12-31"
+        lifespan_until: "2025-01-09"
+      - version: 1.2
+        valid_from: "2023-07-01"
+ERP.UC_3_5:
+  endpoint: "GET /AuditEvent"
+  profiles:
+    - GEM_ERP_PR_AuditEvent:
+      lifespan_days: 0
+      versions:
+      - version: 1.1.1
+        valid_from: "2022-07-01"
+        valid_to: "2023-06-30"
+        lifespan_until: "2023-06-30"
+      - version: 1.2
+        valid_from: "2023-07-01"
+ERP.UC_3_6:
+  endpoint: "GET /Task/<id>"
+  profiles:
+    - GEM_ERP_PR_Task:
+      lifespan_days: 0
+      versions:
+      - version: 1.1.1
+        valid_from: "2022-07-01"
+        valid_to: "2023-06-30"
+        lifespan_until: "2023-06-30"
+      - version: 1.2
+        valid_from: "2023-07-01"
+ERP.UC_3_7:
+  endpoint: "GET /ChargeItem/<id>"
+  profiles:
+    - GEM_ERPCHRG_PR_ChargeItem:
+      lifespan_days: 3650
+      versions:
+      - version: 1.0
+        valid_from: "2023-07-01"
+ERP.UC_3_8:
+  endpoint: "DELETE /Communication/<id>"
+ERP.UC_3_9:
+  endpoint: "GET /MedicationDispense"
+  profiles:
+    - GEM_ERP_PR_MedicationDispense:
+      lifespan_days: 100
+      versions:
+      - version: 1.1.1
+        valid_from: "2022-07-01"
+        valid_to: "2023-06-30"
+        lifespan_until: "2023-10-08"
+      - version: 1.2
+        valid_from: "2023-07-01"
+ERP.UC_3_10:
+  endpoint: "GET /ChargeItem"
+  profiles:
+    - GEM_ERPCHRG_PR_ChargeItem:
+      lifespan_days: 0
+      versions:
+      - version: 1.0
+        valid_from: "2023-07-01"
+ERP.UC_3_11:
+  endpoint: "DELETE /ChargeItem/<id>"
+ERP.UC_3_12:
+  endpoint: "PATCH /ChargeItem/<id>"
+ERP.UC_3_13:
+  endpoint: "GET /Consent"
+  profiles:
+    - GEM_ERPCHRG_PR_Consent:
+      lifespan_days: 0
+      versions:
+      - version: 1.0
+        valid_from: "2023-07-01"
+ERP.UC_3_14:
+  endpoint: "POST /Consent"
+  profiles:
+    - GEM_ERPCHRG_PR_Consent:
+      lifespan_days: 0
+      versions:
+      - version: 1.0
+        valid_from: "2023-07-01"
+ERP.UC_3_15:
+  endpoint: "DELETE /Consent"
